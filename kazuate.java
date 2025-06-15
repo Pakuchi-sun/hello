@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class kazuate {
     public static void main(String[] args) {
-        // プログラマが設定した2桁の正の整数 (例：57)
+        // プログラマが設定した2桁の正の整数
         final int answer = 57;
         final int maxTries = 5;
 
@@ -22,11 +22,13 @@ public class kazuate {
                 int diff = Math.abs(guess - answer);
 
                 if (diff >= 20) {
-                    System.out.println("20以上差があります。");
-                } else if (guess > answer) {
-                    System.out.println("設定された数より大きいです。");
+                    System.out.print("20以上差があります。");
+                }
+
+                if (guess > answer) {
+                    System.out.println(" 設定された数より大きいです。");
                 } else {
-                    System.out.println("設定された数より小さいです。");
+                    System.out.println(" 設定された数より小さいです。");
                 }
 
                 if (attempt == maxTries) {
